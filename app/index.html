@@ -17,7 +17,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -26,44 +26,324 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">openhouse thehangar cr</h3>
-      </div>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+    <!-- Hangar | Marquee -->
+    <header id="js-hero" class="section-marquee h-m-marquee">
+      <svg id="logo" class="icon"><use xlink:href="#hangar_logo"></use></svg>
+      <div class="h-h-table">
+        <div class="h-h-cell">
+          <time>August 29 2015</time>
+          <h1>Open house</h1>
+          <span class="h-label">Love where you work</span>
         </div>
       </div>
+      <svg id="arrow-down" class="icon"><use xlink:href="#arrow"></use></svg>
+    </header>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+    <!-- Hangar | Intro  -->
+    <section id="intro" class="section-intro h-m-intro">
+      <div class="h-h-table">
+        <div class="h-h-cell">
+          <h2>Hangar Open House</h2>
+          <h3>talks and workshops</h3>
+          <p>Participate and share your ideas in our Design, Technology and UX talks.</p>
+        </div>
       </div>
-    </div>
-    
+    </section>
+
+    <!-- Hangar | Grid -->
+    <section class="section-grid h-grid">
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <img src="" alt="open house" />
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Costa Rican Digital<br>Production for<br>International Brands</h4>
+            <h5>Leadership Open Talk</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Mobile <br>Development<br>Native vs. Hybrid</h4>
+            <h5>Technology</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Back-EndDevelopmentfor CMS</h4>
+            <h5>Technology</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>ModernFront-End Development Tools</h4>
+            <h5>Technology</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>A Walkthroughthe Basics ofVisual Design</h4>
+            <h5>Creative</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Our High-EndProductionDesign Philosophy</h4>
+            <h5>Creative</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Automation testingRevolution - Takethe challenge</h4>
+            <h5>QA</h5>
+          </div>
+        </div>
+      </div>
+      <div class="h-grid-item">
+        <div class="h-h-table">
+          <div class="h-h-cell">
+            <h4>Web AnalyticsLorem Ipsumis dolor in</h4>
+            <h5>Analytics</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Hangar | Event Info -->
+    <section class="section-intro h-m-intro">
+      <div class="h-h-table">
+        <div class="h-h-cell text-center">
+          <h2>Event information</h2>
+          <h3>August 29 2015</h3>
+          <time>9 a.m. - 5 p.m.</time>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hangar intro | Event Info -->
+    <section class="section-calendar h-m-calendar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="" alt="calendar" />
+            <h3>Calendar</h3>
+
+            <table class="table" cellspacing="0" cellpadding="0">
+              <tbody>
+                  <tr>
+                      <th>TIME</th>
+                      <th>TALK</th>
+                  </tr>
+                  <tr>
+                      <td>9:00 AM</td>
+                      <td>Welcome and Reception</td>
+                  </tr>
+                  <tr>
+                      <td>9:30 AM - 10:30 AM</td>
+                      <td>Costa Rican Digital Production for International Brands</td>
+                  </tr>
+                  <tr>
+                      <td>10:30 AM - 11:30 AM</td>
+                      <td>Introduction to UX for Digital Products</td>
+                  </tr>
+                  <tr>
+                      <td>11:30 AM - 12:00 PM</td>
+                      <td>Modern Front-End Development Tools   /   Web Analytics</td>
+                  </tr>
+                  <tr>
+                      <td>12:00 PM - 1:00 PM</td>
+                      <td>Food and drinks</td>
+                  </tr>
+                  <tr>
+                      <td>1:00 PM - 1:30 PM</td>
+                      <td>Automation Testing Revolution - Take the challenge</td>
+                  </tr>
+                  <tr>
+                      <td>1:00 PM - 1:30 PM</td>
+                      <td>A Walkthrough the Basics of Visual Design  /  Back-End Development for CMS</td>
+                  </tr>
+                  <tr>
+                      <td>1:30 PM - 2:00 PM</td>
+                      <td>Back-End Development for CMS</td>
+                  </tr>
+                  <tr>
+                      <td>2:00 PM - 3:00 PM</td>
+                      <td>Costa Rican Digital Production for International Brands</td>
+                  </tr>
+                  <tr>
+                      <td>3:00 PM - 4:00 PM</td>
+                      <td>Mobile Development: Native vs. Hybrid</td>
+                  </tr>
+                  <tr>
+                      <td>4:00 PM - 4:30 PM</td>
+                      <td>Our High-End Production Design Philosophy</td>
+                  </tr>
+                  <tr>
+                      <td>4:30 PM - 5:00 PM</td>
+                      <td>Raffle </td>
+                  </tr>
+                  <tr>
+                      <td>5:00 PM</td>
+                      <td>Closing</td>
+                  </tr>
+              </tbody>
+            </table>
+
+            <a href="#" class="btn btn-default">register now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hangar | Map Directions -->
+    <section class="section-map h-m-map">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="" alt="hangar map" />
+            <h3>At Hangar</h3>
+            <p>Zona Franca Metropolitana, Edificio 5b-B<br>Barreal de Heredia, Costa Rica</p>
+            <!-- Map -->
+            <img src="/images/maps.jpg" class="img-responsive" alt="map" />
+
+            <a href="#" class="btn btn-default">Get directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-h-divider"></div>
+
+    <!-- Hangar | Social -->
+    <section class="section-share h-m-share">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Share this with your friends</p>
+            <a href="#"><img src="" alt="facebook"></a>
+            <a href="#"><img src="" alt="twitter"></a>
+            <a href="#"><img src="" alt="google"></a>
+            <a href="#"><img src="" alt="email"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hangar | Registration -->
+    <section class="section-from">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Hangar Open House</h2>
+
+            <form action="#">
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="fullname" />
+                <label class="mdl-textfield__label" for="fullname">Full Name</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="email" />
+                <label class="mdl-textfield__label" for="email">Email</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" />
+                <label class="mdl-textfield__label" for="phone">Phone Number</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+
+              <h4>interested talks</h4>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Costa Rican Digital Production for International Brands</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Mobile Development: Native vs. Hybrid</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Back-End Development for CMS</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Modern Front-End Development Tools</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">A Walkthrough the Basics of Visual Design</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Our High-End Production Design Philosophy</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Introduction to UX for Digital Products</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Automation testing Revolution - Take the challenge</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+                <span class="mdl-checkbox__label">Web Analytics Lorem ipsum</span>
+              </label>
+
+              <button type="submit" class="btn btn-form">Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hangar | Footer -->
+    <footer class="h-m-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <svg id="footer-logo" class="icon"><use xlink:href="#h"></use></svg>
+            <p class="pull-right">© 2015 HANGAR. All Rights Reserved.</p>
+            <ul class="list-unstyled list-inline pull-right">
+              <li><a href="#"><svg id="fb" class="icon"><use xlink:href="#fb"></use></svg></a></li>
+              <li><a href="#"><svg id="tw" class="icon"><use xlink:href="#tw"></use></svg></a></li>
+              <li><a href="#"><svg id="go" class="icon"><use xlink:href="#go"></use></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -79,7 +359,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -94,7 +374,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
