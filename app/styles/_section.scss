@@ -49,12 +49,11 @@ $section-event-time-color: #333333;
   padding: 70px 0;
 }
 
-.section-from {
+// Edit class h-m-footer
+.section-form {
   padding: 70px 0 140px;
   background-color: #000000;
-}
 
-.section-from {
   h2 {
     color: white;
   }
@@ -80,6 +79,9 @@ $section-event-time-color: #333333;
     margin-bottom: 20px;
   }
 
+  @include breakpoint('phone') {
+    padding-bottom: 80px;
+  }
 }
 
 // Share Svg

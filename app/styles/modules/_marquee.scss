@@ -49,4 +49,27 @@
     fill: white;
     cursor: pointer;
   }
+
+  // Mobile
+  @include breakpoint('phone') {
+
+    #logo {
+      top: 5%;
+    }
+
+    #arrow-down {
+      bottom: 5%;
+    }
+
+    h1 {
+      font-size: 75px;
+      margin: -10px 0 40px 0;
+      line-height: 75px;
+    }
+
+    .h-label {
+      width: 100%;
+      display: block;
+    }
+  }
 }

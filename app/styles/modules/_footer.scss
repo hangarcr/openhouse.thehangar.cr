@@ -25,4 +25,10 @@ $h-m-footer-bg: #000;
     }
   }
 
+  // Mobile
+  @include breakpoint('phone') {
+    p, ul {
+      float: none !important;
+    }
+  }
 }
