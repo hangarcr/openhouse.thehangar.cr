@@ -1,0 +1,76 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// core/_fonts.scss
+@mixin fontDINLight() {
+  font-family: 'DINLight'; // Light
+}
+@mixin fontCondDINLight() {
+  font-family: 'DINCondLight'; // Cond Light
+}
+@mixin fontDINRegular() {
+  font-family: 'DIN'; // Regular
+}
+@mixin fontDINMedium() {
+  font-family: 'DINMedium'; // Medium
+}
+@mixin fontDINBold() {
+  font-family: 'DINBold'; // Bold
+}
+@mixin fontDINBlack() {
+  font-family: 'DINBlack'; // Black
+}
+@mixin fontGeorgia() {
+  font-family: Georgia, serif;
+}
+
+
+@mixin breakpoint($points) {
+  @each $point in $points {
+    @if $point == large {
+      @media (min-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == desktop {
+      @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == tablet {
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+    }
+    @else if $point == phone {
+      @media (max-width: $screen-xs-max)  { @content; }
+    }
+  }
+}
+
+@mixin retinabg($img, $width: 0, $height: 0) {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+    background-image: $img;
+    @if $width != 0 {
+      background-size: $width $height;
+    }
+    @if $width == 0 {
+      background-size: contain;
+    }
+  }
+}
+
+@mixin h-mix-tilde($color: $brand-primary) {
+  position: relative;
+  text-align: center;
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 37px; height: 5px;
+    background-color: $color;
+    display: inline-block;
+    left: 0; right: 0; top: -20px;
+    margin: 0 auto;
+
+  }
+}
+

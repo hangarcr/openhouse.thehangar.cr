@@ -1,0 +1,28 @@
+// Variables
+$h-m-footer-color: #444444;
+$h-m-footer-bg: #000;
+
+.h-m-footer {
+  background-color: $h-m-footer-bg;
+  padding-bottom: 100px;
+
+  #footer-logo {
+    width: 85px; height: 85px;
+    margin-bottom: 40px;
+    fill: white;
+  }
+
+  p {
+    color: $h-m-footer-color;
+    font-size: 12px;
+  }
+
+  .svg-icon {
+    fill: white;
+    width: 32px; height: 32px;
+    &:hover  {
+      fill: $brand-primary;
+    }
+  }
+
+}

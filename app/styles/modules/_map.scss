@@ -1,0 +1,21 @@
+$h-m-map-h3-color: #010101;
+
+.h-m-map {
+  h3 {
+    color: $h-m-map-h3-color;
+    font-size: 27px;
+    @include fontDINMedium();
+    text-transform: capitalize;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-size: 27px;
+  }
+
+  // Svg
+  #map-svg {
+    fill: $brand-primary;
+    width: 43px; height: 73px;
+  }
+}

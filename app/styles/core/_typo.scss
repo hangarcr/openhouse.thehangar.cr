@@ -1,0 +1,15 @@
+// Headings
+// -------------------------
+
+h2, h3, h4, h5 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h2 {
+  @include h-mix-tilde();
+}
+
+h3 {
+  @include fontDINBlack();
+}

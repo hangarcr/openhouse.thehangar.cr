@@ -1,0 +1,22 @@
+.h-m-share {
+
+  .svg-icon {
+    width: 86px; height: 84px;
+    border-radius: 50%;
+    background-color: $brand-primary;
+    display: inline-block;
+    margin-right: 50px;
+
+    &:hover {
+      background-color: black;
+    }
+
+    svg {
+      width: 42px;
+      height: 42px;
+      fill: white;
+      margin-top: 22px;
+    }
+  }
+
+}

@@ -1,0 +1,86 @@
+// Var hangar-module-grid
+$h-m-grid-divider: #afe4eb;
+$h-m-grid-h4-color: white;
+$h-m-grid-h5-color: #202020;
+$h-m-grid-h5-color-h: #666666;
+$h-m-grid-time-color: #c0bfbf;
+
+.h-m-grid {
+  position: relative;
+
+  // add border only on large screens
+  @include breakpoint('large') {
+    .row > div:nth-child(3n+2) {
+      .h-m-grid-item {
+        border-right: 1px solid $h-m-grid-divider;
+        border-left: 1px solid $h-m-grid-divider;
+      }
+    }
+  }
+  // Add border only on desktop
+  @include breakpoint('desktop') {
+    .row > div:nth-child(2n+2) {
+      .h-m-grid-item {
+        border-left: 1px solid $h-m-grid-divider;
+      }
+    }
+  }
+
+}
+
+// 480x 490
+.h-m-grid-item {
+  background-color: $brand-primary;
+  height: 100%; width: 100%;
+  display: block;
+  border-bottom: 1px solid $h-m-grid-divider;
+  // border: 1px solid $h-m-grid-divider;
+
+  h4, h5 {
+    @include fontDINBlack();
+    letter-spacing: 3px;
+  }
+
+  h4 {
+    font-size: 30px;
+    color: $h-m-grid-h4-color;
+    line-height: 30px;
+  }
+
+  h5 {
+    font-size: 24px;
+    color: $h-m-grid-h5-color;
+  }
+
+  // Svg color
+  #openhouse-logo {
+    fill: white;
+  }
+
+  .h-h-table {
+    height: 490px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  time  {
+    display: block;
+    padding-top: 40px;
+    color: $h-m-grid-time-color;
+    display: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  // Grid hover State
+  &.is-hover, &:hover {
+    background-color: black;
+    h4 { color: $h-m-grid-h4-color; }
+    h5 { color: $h-m-grid-h5-color-h; padding-bottom: 40px; }
+    .btn { display: inline-block; }
+    time { display: block; }
+  }
+}
+

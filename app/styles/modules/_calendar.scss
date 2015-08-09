@@ -1,0 +1,14 @@
+$h-m-calendar-h3-color: #010101;
+
+.h-m-calendar {
+  h3 {
+    color: $h-m-calendar-h3-color;
+    font-size: 27px;
+    padding-bottom: 20px;
+  }
+  // Svg
+  #calendar-svg {
+    fill: $brand-primary;
+    width: 77px; height: 71px;
+  }
+}

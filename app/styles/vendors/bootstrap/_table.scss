@@ -1,0 +1,36 @@
+// Variables
+$h-m-table-th-color: #999999;
+$h-m-table-th-border: #c8c8c8;
+
+.h-m-table {
+  text-align: left;
+
+  > tbody > tr > th {
+    border-top: none;
+    color: $h-m-table-th-color;
+    border-bottom: 1px solid $brand-primary;
+  }
+
+  > tbody > tr > td {
+    padding: 12px 8px;
+    vertical-align: middle;
+    border-bottom: 1px solid $h-m-table-th-border;
+  }
+
+  > tbody > tr > td:first-child {
+    font-weight: bold;
+    @include fontDINBold();
+  }
+
+
+  @include breakpoint('tablet') {
+    > tbody > tr > td:first-child {
+      min-width: 250px;
+    }
+  }
+  @include breakpoint('phone') {
+    > tbody > tr > td:first-child {
+      min-width: 110px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.mdl-checkbox__tick-outline {
+  mask: inherit;
+}
+
+.mdl-checkbox.is-upgraded {
+  padding-left: 40px;
+  padding-top: 2px;
+}
+
+.mdl-checkbox__box-outline {
+  border-radius: 0;
+  border: 2px solid #999999;
+  width: 25px; height: 25px;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+  background-image: none;
+  background-color: $brand-primary;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+  border: 2px solid $brand-primary;
+}
+
+.mdl-checkbox__label {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+

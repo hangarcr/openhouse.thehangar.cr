@@ -15,7 +15,7 @@ gulp.task('styles', () => {
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.']
+      includePaths: ['.', 'bower_components/bootstrap-sass/assets/stylesheets/']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe($.sourcemaps.write())
@@ -105,7 +105,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['svg', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -161,6 +161,7 @@ gulp.task('serve:test', () => {
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
     .pipe(wiredep({
+      exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)+/
     }))
     .pipe(gulp.dest('app/styles'));

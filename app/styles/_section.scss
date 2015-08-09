@@ -1,0 +1,83 @@
+// Var
+
+$section-event-time-color: #333333;
+
+// Edit class h-m-intro
+.section-event {
+  padding: 40px 0;
+  h3 {
+    font-size: 145px;
+    line-height: 145px;
+    color: $brand-primary;
+    margin-top: -20px;
+  }
+  time {
+    font-size: 85px;
+    color: $section-event-time-color;
+    text-transform: uppercase;
+    @include fontDINBlack();
+  }
+  @include breakpoint('phone') {
+    h3 {
+      font-size: 90px;
+      line-height: 90px;
+    }
+    time {
+      font-size: 45px;
+    }
+  }
+}
+
+// Edit class h-m-calendar
+.section-calendar {
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+// Edit class h-m-map
+.section-map {
+  padding: 70px 0;
+
+  #hangar-map {
+    margin: 50px 0;
+  }
+}
+
+// Edit class h-m-share
+.section-share {
+  padding: 70px 0;
+}
+
+.section-from {
+  padding: 70px 0 140px;
+  background-color: #000000;
+}
+
+.section-from {
+  h2 {
+    color: white;
+  }
+
+  h4 {
+    color: #767676;
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  form {
+    padding-top: 40px;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+
+  .mdl-checkbox__label {
+    color: white;
+  }
+  .mdl-checkbox {
+    margin-bottom: 20px;
+  }
+
+}

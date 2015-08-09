@@ -1,0 +1,26 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.btn-primary {
+  @include button-variant(white, #000, transparent);
+  &:hover, &:active, &:focus {
+    background-color: $btn-primary-bg;
+  }
+}
+.btn-secondary {
+  @include button-variant(#000, $btn-primary-bg, transparent);
+  &:hover, &:active, &:focus {
+    background-color: white;
+  }
+}
