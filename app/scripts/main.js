@@ -5,10 +5,10 @@ $(function() {
   'use strict';
   FastClick.attach(document.body);
 
-  $(".js-h-arrow-down").click(function(e) {
+  $('.js-h-arrow-down').click(function(e) {
     e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#intro").offset().top
+        scrollTop: $('#intro').offset().top
     }, 800);
   });
 
