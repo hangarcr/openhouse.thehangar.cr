@@ -8,8 +8,8 @@ $icon-font-path: '../fonts/';
 @import "vendors/mdl/variables";
 
 // Custom Utils
-@import "helpers/utils";
 @import "helpers/mixins";
+@import "helpers/utils";
 
 // Core
 @import "core/fonts";
@@ -32,6 +32,7 @@ $icon-font-path: '../fonts/';
 
 // Custom Vendors Modulos
 @import "vendors/bootstrap/table";
+@import "vendors/bootstrap/modal";
 @import "vendors/mdl/textfield";
 @import "vendors/mdl/checkbox";
 

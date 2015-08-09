@@ -34,4 +34,8 @@
   display: block;
   height: 1px;
   background-color: #b2b2b2;
+
+  @include breakpoint('phone') {
+    width: 80%;
+  }
 }
