@@ -82,6 +82,7 @@ gulp.task('fonts', () => {
 gulp.task('svg', () => {
     var svgs = gulp
         .src('app/images/svg/*.svg')
+        .pipe($.svgmin())
         .pipe($.svgstore({ inlineSvg: true }));
 
     function fileContents (filePath, file) {

@@ -17,10 +17,11 @@ $section-event-time-color: #333333;
     text-transform: uppercase;
     @include fontDINBlack();
   }
+
   @include breakpoint('phone') {
     h3 {
-      font-size: 90px;
-      line-height: 90px;
+      font-size: 83px;
+      line-height: 80px;
     }
     time {
       font-size: 45px;
