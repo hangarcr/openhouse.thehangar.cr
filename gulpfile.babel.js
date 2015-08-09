@@ -78,6 +78,22 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+// Combine svg files and inject it into index.html
+gulp.task('svg', () => {
+    var svgs = gulp
+        .src('app/images/svg/*.svg')
+        .pipe($.svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp
+        .src('app/index.html')
+        .pipe($.inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest('app'));
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -110,6 +126,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
+  gulp.watch('app/images/svg/*.svg', ['svg']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
@@ -156,7 +173,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'svg', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
