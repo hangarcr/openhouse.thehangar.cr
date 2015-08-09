@@ -82,6 +82,9 @@ $section-event-time-color: #333333;
 
   @include breakpoint('phone') {
     padding-bottom: 80px;
+    .mdl-checkbox {
+      margin-bottom: 10px;
+    }
   }
 }
 

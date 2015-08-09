@@ -27,4 +27,21 @@
   letter-spacing: 2px;
 }
 
+@include breakpoint('phone') {
+  .mdl-checkbox__box-outline {
+    width: 15px; height: 15px;
+  }
+  .mdl-checkbox.is-upgraded {
+    padding-left: 24px;
+    padding-top: 0;
+  }
+  .mdl-checkbox__label {
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0;
+    display: inherit;
+  }
+
+}
 
