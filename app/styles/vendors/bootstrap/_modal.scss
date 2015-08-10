@@ -13,14 +13,18 @@
   position: absolute;
   right: 1px; top: 2px;
   padding: 0;
+  outline: 0;
 
   font-size: 120px;
-  line-height: 47px;
+  line-height: 20px;
   @include fontDINLight();
   color: $brand-primary;
 
-  span {
+  .svg-close {
     display: inline-block;
+    width: 42px; height: 42px;
+    fill: $brand-primary;
+
   }
 }
 

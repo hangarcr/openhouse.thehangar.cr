@@ -2,7 +2,11 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
+import babelify from 'babelify';
+import browserify from 'browserify';
+import source from 'vinyl-source-stream';
 import del from 'del';
+// import Notification from 'node-notifier';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
@@ -95,6 +99,39 @@ gulp.task('svg', () => {
         .pipe(gulp.dest('app'));
 });
 
+var notifier = require('node-notifier');
+// Standard handler
+var standardHandler = function (err) {
+  // Notification
+  // var notifier = new notification();
+  notifier.notify({ message: 'Error: ' + err.message });
+  // Log to console
+  $.util.log($.util.colors.red('Error'), err.message);
+}
+
+// Handler for browserify
+var browserifyHandler = function (err) {
+  standardHandler(err);
+  this.end();
+}
+
+// Es6 browserify and babel
+// enable module system
+gulp.task('es6', () => {
+
+  browserify({
+    entries: './app/es6/main.js',
+      debug: true
+    })
+    .transform(babelify)
+    .on('error', standardHandler)
+    .bundle()
+    .on('error', browserifyHandler)
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('./app/scripts/'));
+
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -106,7 +143,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['svg', 'styles', 'fonts'], () => {
+gulp.task('serve', ['svg', 'es6', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -126,6 +163,7 @@ gulp.task('serve', ['svg', 'styles', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/es6/**/*.js', ['es6']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('app/images/svg/*.svg', ['svg']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -175,7 +213,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'svg', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
