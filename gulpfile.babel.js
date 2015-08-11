@@ -6,6 +6,7 @@ import babelify from 'babelify';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
 import del from 'del';
+
 // import Notification from 'node-notifier';
 import {stream as wiredep} from 'wiredep';
 
@@ -129,22 +130,23 @@ gulp.task('es6', () => {
     .on('error', browserifyHandler)
     .pipe(source('main.js'))
     .pipe(gulp.dest('./app/scripts/'));
-
 });
 
-// Vulcanize imports
-gulp.task('vulcanize', function () {
-  var DEST_DIR = 'dist/elements';
+// Copy google map dependecies for build
+gulp.task('google-map', () => {
 
-  return gulp.src('app/index.html')
-    .pipe($.vulcanize({
-      dest: DEST_DIR,
-      strip: true,
-      inlineCss: true,
-      inlineScripts: true
-    }))
-    .pipe(gulp.dest(DEST_DIR))
-    .pipe($.size({title: 'vulcanize'}));
+  var goMap = require('./bower_components/google-map/bower.json').dependencies;
+  var src = ['./bower_components/google-map/*', './bower_components/iron-jsonp-library/*'];
+
+  for(var attr in goMap){
+    if (attr) {
+      src.push('./bower_components/'+ attr.toString() + '/*');
+    }
+  }
+
+  return gulp
+      .src(src, { base: './' })
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('extras', () => {
@@ -228,7 +230,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'google-map', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
