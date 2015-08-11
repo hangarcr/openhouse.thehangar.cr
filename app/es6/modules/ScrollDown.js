@@ -12,8 +12,9 @@ var ScrollDown = () => {
   });
 
   $('a[href^="#"]').on('click', function (e) {
+    debugger;
     var target = $(this.hash);
-    if( target.length ) {
+    if( target.length > 0) {
         e.preventDefault();
         animate(target);
     }

@@ -6,14 +6,14 @@ if (window.__env) {
   env_url = window.__env.url;
 }
 
-var title = encodeURIComponent('Discover the plance you want to be in.');
 var url = encodeURIComponent(env_url);
 
 var facebookString = `http://www.facebook.com/sharer.php?s=100&p[url]=${url}`;
 var googleString = `https://plus.google.com/share?url=${url}`;
 
-var title = "A place of great opportunities  - Join us at the @Hangar_cr #OpenHouse";
+var title =  encodeURIComponent('A place of great opportunities  - Join us at the @Hangar_cr #OpenHouse');
 var twitterString = `https://twitter.com/share?text=${title}&url=${url}`;
+console.log(twitterString);
 
 class Share {
     constructor(debug = false) {
@@ -32,6 +32,7 @@ class Share {
     }
 
     clickLink (e) {
+      e.preventDefault();
       window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=620,width=500');
       return false;
     }
