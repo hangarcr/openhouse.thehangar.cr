@@ -1,7 +1,13 @@
 //imports/RegistrationForm .js
 
+var env_url = 'http://openhouse.thehangar.cr/';
+
+if (window.__env) {
+  env_url = window.__env.url;
+}
+
 var title = encodeURIComponent('Discover the plance you want to be in.');
-var url = encodeURIComponent('http://openhouse.thehangar.cr/');
+var url = encodeURIComponent(env_url);
 
 var facebookString = `http://www.facebook.com/sharer.php?s=100&p[url]=${url}`;
 var googleString = `https://plus.google.com/share?url=${url}`;

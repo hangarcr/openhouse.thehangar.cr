@@ -1,4 +1,4 @@
-let ScrollDown = () => {
+var ScrollDown = () => {
 
   var animate = (target) => {
     $('html, body').animate({

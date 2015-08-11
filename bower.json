@@ -6,7 +6,8 @@
     "modernizr": "~2.8.1",
     "material-design-lite": "~1.0.2",
     "fastclick": "~1.0.6",
-    "google-map": "GoogleWebComponents/google-map#~1.0.4"
+    "google-map": "GoogleWebComponents/google-map#~1.0.4",
+    "validate": "~0.8.0"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -8,6 +8,13 @@ $h-m-grid-time-color: #c0bfbf;
 // Grid hover State
 @mixin is-active() {
   background-color: black;
+
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+
   h4 { color: $h-m-grid-h4-color; }
   h5 { color: $h-m-grid-h5-color-h; padding-bottom: 40px; }
   .btn { display: inline-block; }

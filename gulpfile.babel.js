@@ -110,12 +110,6 @@ var standardHandler = function (err) {
   $.util.log($.util.colors.red('Error'), err.message);
 }
 
-// Handler for browserify
-var browserifyHandler = function (err) {
-  standardHandler(err);
-  this.end();
-}
-
 // Es6 browserify and babel
 // enable module system
 gulp.task('es6', () => {
@@ -127,7 +121,7 @@ gulp.task('es6', () => {
     .transform(babelify)
     .on('error', standardHandler)
     .bundle()
-    .on('error', browserifyHandler)
+    .on('error', standardHandler)
     .pipe(source('main.js'))
     .pipe(gulp.dest('./app/scripts/'));
 });
