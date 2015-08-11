@@ -42,7 +42,7 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
+gulp.task('lint', lint('app/es6/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
@@ -132,6 +132,21 @@ gulp.task('es6', () => {
 
 });
 
+// Vulcanize imports
+gulp.task('vulcanize', function () {
+  var DEST_DIR = 'dist/elements';
+
+  return gulp.src('app/index.html')
+    .pipe($.vulcanize({
+      dest: DEST_DIR,
+      strip: true,
+      inlineCss: true,
+      inlineScripts: true
+    }))
+    .pipe(gulp.dest(DEST_DIR))
+    .pipe($.size({title: 'vulcanize'}));
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -213,7 +228,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

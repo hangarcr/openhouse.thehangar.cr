@@ -7,19 +7,19 @@
     <title>hangar - openhouse</title>
 
     <!-- Opengraph -->
-    <meta property="og:url"           content="http://openhouse.thehangar.cr/index.html" />
+    <meta property="og:url"           content="http://openhouse.thehangar.cr/" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="HANGAR OPEN HOUSE" />
-    <meta property="og:description"   content="Participate and share your ideas in our Design, Technology and UX talks." />
-    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+    <meta property="og:title"         content="Discover the plance you want to be in." />
+    <meta property="og:description"   content="Come on August 29, visit our new office and discover some of our work for the biggest agencies and global brands. Participate and share your ideas in our Design, Technology and UX talks." />
+    <meta property="og:image"         content="http://openhouse.thehangar.cr/images/hero.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Hangar_cr">
     <meta name="twitter:creator" content="@Hangar_cr">
-    <meta name="twitter:title" content="HANGAR OPEN HOUSE">
-    <meta name="twitter:description" content="Participate and share your ideas in our Design, Technology and UX talks.">
-    <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+    <meta name="twitter:title" content="Discover the plance you want to be in.">
+    <meta name="twitter:description" content="Come on August 29, visit our new office and discover some of our work for the biggest agencies and global brands. Participate and share your ideas in our Design, Technology and UX talks.">
+    <meta name="twitter:image" content="http://openhouse.thehangar.cr/images/hero.jpg">
 
     <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
@@ -36,6 +36,8 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <link rel="import" href="/bower_components/google-map/google-map.html">
   </head>
   <body>
   <div style="height: 0; width: 0; position: absolute; top: 0; visibility: hidden;">
@@ -92,7 +94,7 @@
                 <div class="h-h-cell">
                   <h4>Costa Rican Digital<br>Production for<br>International Brands</h4>
                   <h5>Leadership Open Talk</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>9:30 AM - 10:30 AM</time>
                 </div>
               </div>
@@ -104,7 +106,7 @@
                 <div class="h-h-cell">
                   <h4>Mobile <br>Development<br>Native vs. Hybrid</h4>
                   <h5>Technology</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>3:00 PM - 4:00 PM</time>
                 </div>
               </div>
@@ -116,7 +118,7 @@
                 <div class="h-h-cell">
                   <h4>Back-End<br>Development<br>for CMS</h4>
                   <h5>Technology</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>1:30 PM - 2:00 PM</time>
                 </div>
               </div>
@@ -128,7 +130,7 @@
                 <div class="h-h-cell">
                   <h4>Modern<br>Front-End <br>Development Tools</h4>
                   <h5>Technology</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>11:30 AM - 12:00 PM</time>
                 </div>
               </div>
@@ -140,7 +142,7 @@
                 <div class="h-h-cell">
                   <h4>A Walkthrough<br>the Basics of<br>Visual Design</h4>
                   <h5>Creative</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>1:00 PM - 1:30 PM</time>
                 </div>
               </div>
@@ -152,7 +154,7 @@
                 <div class="h-h-cell">
                   <h4>Our High-End<br>Production<br>Design Philosophy</h4>
                   <h5>Creative</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>4:00 PM - 4:30 PM</time>
                 </div>
               </div>
@@ -164,7 +166,7 @@
                 <div class="h-h-cell">
                   <h4>Automation testing<br>Revolution - Take<br>the challenge</h4>
                   <h5>QA</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>1:00 PM - 1:30 PM</time>
                 </div>
               </div>
@@ -176,7 +178,7 @@
                 <div class="h-h-cell">
                   <h4>Web Analytics<br>Lorem Ipsum<br>is dolor in</h4>
                   <h5>Analytics</h5>
-                  <a href="#" class="btn btn-secondary">register now</a>
+                  <a href="#section-form" class="btn btn-secondary">register now</a>
                   <time>0:00 AM - 00:00 am</time>
                 </div>
               </div>
@@ -280,7 +282,8 @@
             <h3>At Hangar</h3>
             <p>Zona Franca Metropolitana, Edificio 5b-B<br class="hidden-xs">Barreal de Heredia, Costa Rica</p>
             <!-- Map -->
-            <img id="hangar-map" src="/images/maps.jpg" class="img-responsive" alt="map" />
+            <img id="hangar-map" class="visible-xs img-responsive" src="/images/maps.jpg" class="img-responsive" alt="map" />
+            <google-map id="hangar-map" class="hidden-xs" latitude="37.77493" longitude="-122.41942"></google-map>
 
             <a href="#" class="btn btn-primary">Get directions</a>
           </div>
@@ -296,9 +299,9 @@
         <div class="row no-gutter">
           <div class="col-md-12 text-center">
             <p>Share this with your friends</p>
-            <a class="svg-icon" href="#"><svg id="fb-svg"><use xlink:href="#social_fb"></use></svg></a>
-            <a class="svg-icon" href="#"><svg id="tw-svg"><use xlink:href="#social_tw"></use></svg></a>
-            <a class="svg-icon" href="#"><svg id="google-svg"><use xlink:href="#social_google"></use></svg></a>
+            <a id="js-social-fb" target="_new" class="svg-icon" href="#"><svg id="fb-svg"><use xlink:href="#social_fb"></use></svg></a>
+            <a id="js-social-tw" target="_new" class="svg-icon" href="#"><svg id="tw-svg"><use xlink:href="#social_tw"></use></svg></a>
+            <a id="js-social-go" target="_new" class="svg-icon" href="#"><svg id="google-svg"><use xlink:href="#social_google"></use></svg></a>
             <a class="svg-icon" href="mailto:?subject=Hangar%20-%20OpenHouse"><svg id="email-svg"><use xlink:href="#mail"></use></svg></a>
           </div>
         </div>
@@ -306,7 +309,7 @@
     </section>
 
     <!-- Hangar | Registration -->
-    <section class="section-form">
+    <section id="section-form" class="section-form">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -398,8 +401,8 @@
             <p class="pull-left">© 2015 HANGAR. All Rights Reserved.</p>
             <ul class="list-unstyled list-inline pull-right">
               <li><a target="_blank" href="https://www.facebook.com/Hangar.cr"><svg id="fb" class="svg-icon"><use xlink:href="#social_fb"></use></svg></a></li>
-              <li><a target="_blank" href="https://twitter.com/Hangar_cr"><svg id="tw" class="svg-icon"><use xlink:href="#social_tw"></use></svg></a></li>
-              <li><a target="_blank" href="https://www.linkedin.com/company/245567"><svg id="in" class="svg-icon"><use xlink:href="#social_in"></use></svg></a></li>
+              <li><a target="_blank" href="https://twitter.com/hangar_cr"><svg id="tw" class="svg-icon"><use xlink:href="#social_tw"></use></svg></a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/the-hangar-interactive?trk=mini-profile"><svg id="in" class="svg-icon"><use xlink:href="#social_in"></use></svg></a></li>
             </ul>
           </div>
         </div>
@@ -440,6 +443,7 @@
     <script src="/bower_components/material-design-lite/src/textfield/textfield.js"></script>
     <script src="/bower_components/material-design-lite/src/checkbox/checkbox.js"></script>
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

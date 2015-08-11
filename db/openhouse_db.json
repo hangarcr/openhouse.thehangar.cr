@@ -1,0 +1,11 @@
+{
+  "registration": [
+    {
+      "id": 1,
+      "fullname": "Ethan Gatjens",
+      "email": "egatjens@corp.io",
+      "phone": "506 83374462",
+      "aboutus": "facebook"
+    }
+  ]
+}
