@@ -48,7 +48,7 @@ class RegistrationForm {
     this.fullname = this.element.querySelector('#fullname');
     this.email = this.element.querySelector('#email');
     this.phone = this.element.querySelector('#phone');
-    this.checkboxList = this.element.querySelector('.mdl-checkbox__input');
+    this.checkboxList = $('.mdl-checkbox__input');
 
     // Attach submit event
     this.element.addEventListener("submit", (e) => {
@@ -85,10 +85,15 @@ class RegistrationForm {
     });
   }
 
-  successfn (xhr) {
-    console.log(xhr);
+  cleanInputs () {
+    this.fullname.value = '';
+    this.email.value = '';
+    this.phone.value = '';
+
+    this.checkboxList.filter(':checked').removeAttr('checked');
+    $('.mdl-js-checkbox').removeClass('is-checked');
   }
-  successfn (error) {
+  errorfn (error) {
     console.log(error);
   }
 
@@ -101,7 +106,10 @@ class RegistrationForm {
 
       var data =  $( this.element ).serializeArray();
 
-      $.post(this.postURL, data).done(this.successfn).fail(this.errorfn);
+      $.post(this.postURL, data).done((xhr)=> {
+        $(this.modal).modal('show');
+        this.cleanInputs();
+      }).fail(this.errorfn);
     }
   }
 }
