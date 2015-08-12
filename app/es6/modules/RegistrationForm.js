@@ -39,8 +39,8 @@ var constraints = {
 
 class RegistrationForm {
   constructor(debug = false) {
-    // this.postURL = 'http://openhouse.hangar.agency:@openhouse.hangar.agency/attendees';
-    this.postURL = 'http://localhost:3000/registration';
+    this.postURL = 'http://openhouse.hangar.agency/attendees';
+    // this.postURL = 'http://localhost:3000/registration';
 
     this.element = document.getElementById('formRegistration');
     this.modal = document.getElementById('openhouse-thanks');
