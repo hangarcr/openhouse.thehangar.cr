@@ -1,0 +1,17 @@
+#toast-container {
+  > div {
+    border-radius: 0;
+    padding: 10px;
+    @include box-shadow(0 0 4px #999999);
+    width: 340px;
+  }
+
+  > .toast-error {
+    background-image: none !important;
+  }
+
+  .toast-close-button {
+    top: -0.5em;
+    right: -0.1em;
+  }
+}

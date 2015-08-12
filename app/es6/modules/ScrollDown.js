@@ -12,7 +12,6 @@ var ScrollDown = () => {
   });
 
   $('a[href^="#"]').on('click', function (e) {
-    debugger;
     var target = $(this.hash);
     if( target.length > 0) {
         e.preventDefault();

@@ -16,13 +16,6 @@ var constraints = {
       message: "must be at least 4 characters"
     }
   },
-  "talks[]": {
-    presence: true,
-    length: {
-      minimum: 1,
-      message: "must be at least 1 talk selected"
-    }
-  },
   phone_number: {
     presence: true,
     length: {
@@ -39,8 +32,9 @@ var constraints = {
 
 class RegistrationForm {
   constructor(debug = false) {
+    // url: http://openhouse.hangar.agency/attendees
+
     this.postURL = 'http://openhouse.hangar.agency/attendees';
-    // this.postURL = 'http://localhost:3000/registration';
 
     this.element = document.getElementById('formRegistration');
     this.modal = document.getElementById('openhouse-thanks');
@@ -48,6 +42,7 @@ class RegistrationForm {
     this.fullname = this.element.querySelector('#fullname');
     this.email = this.element.querySelector('#email');
     this.phone = this.element.querySelector('#phone');
+    this.hear_question = this.element.querySelector('#hear_question');
     this.checkboxList = $('.mdl-checkbox__input');
 
     // Attach submit event
@@ -59,6 +54,8 @@ class RegistrationForm {
     // Notification settings
     toastr.options = {
       closeButton: true,
+      timeOut: 15000,
+      newestOnTop: true,
       positionClass: "toast-top-right"
     }
 
@@ -72,44 +69,52 @@ class RegistrationForm {
     console.log(errors);
 
     if (errors) {
-      this.showErros(errors);
+      this.showErrors(errors);
       return false;
     }
     return true;
   }
 
-  showErros (errors) {
+  showErrors (errors) {
     let stringErrors = '';
     Object.keys(errors).forEach(function (key) {
       toastr.error(errors[key]);
     });
   }
 
+  errorfn (xhr, textStatus, errorThrown) {
+    this.showErrors({ error: ['Oops! An error occurred! Please try again!'] });
+  }
+
   cleanInputs () {
     this.fullname.value = '';
     this.email.value = '';
     this.phone.value = '';
+    this.hear_question.selectedIndex = 0;
 
     this.checkboxList.filter(':checked').removeAttr('checked');
     $('.mdl-js-checkbox').removeClass('is-checked');
   }
-  errorfn (error) {
-    console.log(error);
-  }
+
 
   save () {
     // clean messages
     toastr.clear();
 
     if (this.validate()) {
-      console.log('submit form');
 
       var data =  $( this.element ).serializeArray();
 
-      $.post(this.postURL, data).done((xhr)=> {
-        $(this.modal).modal('show');
-        this.cleanInputs();
-      }).fail(this.errorfn);
+      $.post(this.postURL, data).done( (xhr) => {
+        if (!xhr.success) {
+          this.showErrors(xhr.errors);
+        } else {
+          $(this.modal).modal('show');
+          this.cleanInputs();
+        }
+      }).fail( (xhr, textStatus, errorThrown) => {
+        this.errorfn(xhr, textStatus, errorThrown);
+      });
     }
   }
 }

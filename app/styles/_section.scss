@@ -48,6 +48,10 @@ $section-event-time-color: #333333;
 // Edit class h-m-share
 .section-share {
   padding: 70px 0;
+
+  @include breakpoint('phone') {
+    padding: 35px 0;
+  }
 }
 
 // Edit class h-m-footer

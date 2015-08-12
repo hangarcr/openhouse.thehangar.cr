@@ -1,0 +1,20 @@
+.h-m-select {
+  display: block;
+  position: relative;
+  padding: 20px 0;
+
+  select {
+    width: 95%;
+    height: 60px;
+    padding-left: 20px;
+    color: #CCCCCC;
+    border: 1px solid #888888;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: inherit;
+    background: none;
+    background: transparent;
+    position: relative;
+  }
+}

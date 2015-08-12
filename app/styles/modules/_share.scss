@@ -25,7 +25,14 @@
 
   @include breakpoint('phone') {
     .svg-icon {
-      margin-right: 0;
+      margin-right: 5px;
+      width: 56px;
+      height: 54px;
+      svg {
+        margin-top: 12px;
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }
