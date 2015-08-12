@@ -7,6 +7,10 @@
     display: inline-block;
     margin-right: 50px;
 
+    &:last-child {
+      margin-right: 0;
+    }
+
     &:hover {
       background-color: black;
     }
