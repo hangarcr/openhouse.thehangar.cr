@@ -13,7 +13,6 @@ var googleString = `https://plus.google.com/share?url=${url}`;
 
 var title =  encodeURIComponent('A place of great opportunities  - Join us at the @Hangar_cr #OpenHouse');
 var twitterString = `https://twitter.com/share?text=${title}&url=${url}`;
-console.log(twitterString);
 
 class Share {
     constructor(debug = false) {

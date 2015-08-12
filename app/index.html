@@ -26,6 +26,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -240,11 +241,11 @@
                   </tr>
                   <tr>
                       <td>1:00 P.M. - 1:30 P.M.</td>
-                      <td>A Walkthrough the Basics of Visual Design  /  Back-End Development for CMS</td>
+                      <td>A Walkthrough the Basics of Visual Design  /  Modern back-end environments and tools</td>
                   </tr>
                   <tr>
                       <td>1:30 P.M. - 2:00 P.M.</td>
-                      <td>Back-End Development for CMS</td>
+                      <td>Modern back-end environments and tools</td>
                   </tr>
                   <tr>
                       <td>2:00 P.M. - 3:00 P.M.</td>
@@ -321,18 +322,18 @@
               <input type="hidden" value="" data-ignored />
 
               <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="fullname" />
+                <input class="mdl-textfield__input" type="text" id="fullname" name="full_name" />
                 <label class="mdl-textfield__label" for="fullname">Full Name</label>
                 <span class="mdl-textfield__error">Input can not be empty!</span>
               </div>
               <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                <input class="mdl-textfield__input" type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
                 <label class="mdl-textfield__label" for="email">Email</label>
                 <span class="mdl-textfield__error">Invalid email!</span>
               </div>
 
               <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" />
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone_number" />
                 <label class="mdl-textfield__label" for="phone">Phone Number</label>
                 <span class="mdl-textfield__error">Input is not a number!</span>
               </div>
@@ -340,52 +341,53 @@
               <h4>interested talks</h4>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-1">
-                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-1" name="talks[]" value="9" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Costa Rican Digital Production for International Brands</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-2">
-                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-2" name="talks[]" value="10" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Mobile Development: Native vs. Hybrid</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-3">
-                <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" />
-                <span class="mdl-checkbox__label">Back-End Development for CMS</span>
+                <input type="checkbox" id="checkbox-3" name="talks[]" value="11" class="mdl-checkbox__input" />
+                <span class="mdl-checkbox__label">Modern back-end environments and tools</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-4">
-                <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-4" name="talks[]" value="12" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Modern Front-End Development Tools</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-5">
-                <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-5" name="talks[]" value="13" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">A Walkthrough the Basics of Visual Design</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-6">
-                <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-6" name="talks[]" value="14" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Our High-End Production Design Philosophy</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-7">
-                <input type="checkbox" id="checkbox-7" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-7" name="talks[]" value="15" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Introduction to UX for Digital Products</span>
               </label>
 
               <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-8">
-                <input type="checkbox" id="checkbox-8" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-8" name="talks[]" value="16" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Automation testing Revolution - Take the challenge</span>
               </label>
 
               <!-- <label class="mdl-checkbox mdl-js-checkbox" for="checkbox-9">
-                <input type="checkbox" id="checkbox-9" class="mdl-checkbox__input" />
+                <input type="checkbox" id="checkbox-9" name="talks[]" class="mdl-checkbox__input" />
                 <span class="mdl-checkbox__label">Web Analytics Lorem ipsum</span>
               </label> -->
 
               <div class="text-center">
-                <a data-toggle="modal" data-target="#openhouse-thanks" class="btn btn-secondary">Submit</a>
+                <button type="submit" class="btn btn-secondary">Submit</button>
+                <!-- <a data-toggle="modal" data-target="#openhouse-thanks" class="btn btn-secondary">Submit</a> -->
               </div>
 
             </form>
@@ -449,6 +451,7 @@
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="/bower_components/validate/validate.js"></script>
+    <script src="/bower_components/toastr/toastr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
