@@ -24,6 +24,9 @@
   .h-label {
       background-color: #303131;
       padding: 15px 35px;
+      width: 373px;
+      margin: 0 auto;
+      display: block;
   }
 
   // Svg
@@ -59,6 +62,7 @@
 
     #logo {
       top: 5%;
+      height: 50px;
     }
 
     #arrow-down {
@@ -66,15 +70,18 @@
     }
 
     h1 {
-      font-size: 75px;
+      font-size: 80px;
       margin: -10px 0 40px 0;
-      line-height: 75px;
+      line-height: 80px;
     }
 
     .h-label {
-      width: 80%;
+      width: auto;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 15px 20px;
       margin: 0 auto;
-      display: block;
+      display: inline-block;
     }
   }
 }
