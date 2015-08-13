@@ -224,7 +224,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'google-map', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'svg', 'es6', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

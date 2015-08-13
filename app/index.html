@@ -38,6 +38,10 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <!--
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+    -->
     <script src="/__/env.js"></script>
 
     <link rel="import" href="/bower_components/google-map/google-map.html">
@@ -285,8 +289,9 @@
             <h3>At Hangar</h3>
             <p>Zona Franca Metropolitana, Edificio 5b-B<br class="hidden-xs">Barreal de Heredia, Costa Rica</p>
             <!-- Map -->
-            <img class="visible-sm visible-xs img-responsive" src="/images/maps.jpg" class="img-responsive" alt="map" />
-            <google-map id="hangar-map" class="hidden-sm hidden-xs" zoom="15" latitude="9.9810558" longitude="-84.1464086"></google-map>
+            <!-- <img class="visible-sm visible-xs img-responsive" src="/images/maps.jpg" class="img-responsive" alt="map" /> -->
+            <img class="img-responsive" src="/images/maps.jpg" class="img-responsive" alt="map" />
+            <!-- <google-map id="hangar-map" class="hidden-sm hidden-xs" zoom="15" latitude="9.9810558" longitude="-84.1464086"></google-map> -->
 
             <a href="https://www.google.co.cr/maps/place/Hangar,+5b+-+B/@9.9810558,-84.1464086,17z/data=!3m1!4b1!4m2!3m1!1s0x8fa0fbabb23925ab:0x334d949d2a93b666?hl=es" target="_blank" class="btn btn-primary">Get directions</a>
           </div>
@@ -315,7 +320,7 @@
     <section id="section-form" class="section-form">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-lg-8 col-lg-offset-2">
             <h2>pre-REGISTRATION</h2>
 
             <form action="#" id="formRegistration">
@@ -327,13 +332,13 @@
                     <span class="mdl-textfield__error">Input can not be empty!</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                    <input class="mdl-textfield__input" type="text" id="email" name="email" />
                     <label class="mdl-textfield__label" for="email">Email</label>
                     <span class="mdl-textfield__error">Invalid email!</span>
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone_number" />
+                    <input class="mdl-textfield__input" type="text" id="phone" name="phone_number" />
                     <label class="mdl-textfield__label" for="phone">Phone Number</label>
                     <span class="mdl-textfield__error">Input is not a number!</span>
                 </div>
