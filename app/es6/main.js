@@ -8,7 +8,7 @@ $(() => {
   'use strict';
 
   // Polyfill to remove click delays on browsers with touch UIs
-  FastClick.attach(document.body);
+  // FastClick.attach(document.body);
 
   // Arrow down animation
   ScrollDown();

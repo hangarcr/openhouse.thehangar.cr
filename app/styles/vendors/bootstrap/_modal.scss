@@ -21,6 +21,7 @@
   color: $brand-primary;
 
   .svg-close {
+    pointer-events: none;
     display: inline-block;
     width: 42px; height: 42px;
     fill: $brand-primary;
@@ -61,10 +62,12 @@
 
 @include breakpoint('tablet') {
   .modal-header {
-    height: 20px;
+    height: 70px;
   }
   #openhouse-thanks {
     .modal-body {
+      padding-top: 0;
+
       .openhouse-logo {
         width: 186px;
         height: 180px;

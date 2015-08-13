@@ -10,7 +10,8 @@ var constraints = {
     }
   },
   email: {
-    presence: true, email: true,
+    presence: true,
+    email: true,
     length: {
       minimum: 4,
       message: "must be at least 4 characters"
@@ -19,8 +20,8 @@ var constraints = {
   phone_number: {
     presence: true,
     length: {
-      minimum: 4,
-      message: "must be at least 8 characters"
+      is: 8,
+      message: "must be 8 characters"
     },
     format: {
       pattern: "[0-9]+",
@@ -34,7 +35,10 @@ class RegistrationForm {
   constructor(debug = false) {
     // url: http://openhouse.hangar.agency/attendees
 
+    // this.postURL = 'http://openhouse.hangar.agency/attendee';
     this.postURL = 'http://openhouse.hangar.agency/attendees';
+
+    this.saveInProgress = false;
 
     this.element = document.getElementById('formRegistration');
     this.modal = document.getElementById('openhouse-thanks');
@@ -48,6 +52,12 @@ class RegistrationForm {
     // Attach submit event
     this.element.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      if (this.saveInProgress) {
+        toastr.info('Your info is still saving please wait .. !');
+        return false;
+      }
+
       this.save();
     });
 
@@ -65,8 +75,6 @@ class RegistrationForm {
   validate () {
     var values = validate.collectFormValues(this.element);
     var errors = validate(values, constraints);
-
-    console.log(errors);
 
     if (errors) {
       this.showErrors(errors);
@@ -103,6 +111,8 @@ class RegistrationForm {
 
     if (this.validate()) {
 
+      this.saveInProgress = true;
+
       var data =  $( this.element ).serializeArray();
 
       $.post(this.postURL, data).done( (xhr) => {
@@ -114,6 +124,8 @@ class RegistrationForm {
         }
       }).fail( (xhr, textStatus, errorThrown) => {
         this.errorfn(xhr, textStatus, errorThrown);
+      }).always(() => {
+        this.saveInProgress = false;
       });
     }
   }
