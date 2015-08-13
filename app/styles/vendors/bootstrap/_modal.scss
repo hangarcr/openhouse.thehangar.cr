@@ -83,7 +83,7 @@
 
 @include breakpoint('phone') {
   .modal-header {
-    height: 20px;
+    height: 70px;
   }
   #openhouse-thanks {
     .modal-body {
@@ -101,10 +101,6 @@
 }
 
 @include breakpoint('desktop') {
-
-  .modal-header {
-    height: 30px;
-  }
 
   .modal-dialog {
     margin-top: 40px;
