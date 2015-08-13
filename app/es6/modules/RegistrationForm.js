@@ -34,8 +34,6 @@ var constraints = {
 class RegistrationForm {
   constructor(debug = false) {
     // url: http://openhouse.hangar.agency/attendees
-
-    // this.postURL = 'http://openhouse.hangar.agency/attendee';
     this.postURL = 'http://openhouse.hangar.agency/attendees';
 
     this.saveInProgress = false;
