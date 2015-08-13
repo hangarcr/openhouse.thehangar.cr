@@ -19,6 +19,7 @@ $h-m-grid-time-color: #c0bfbf;
   h5 { color: $h-m-grid-h5-color-h; padding-bottom: 40px; }
   .btn { display: inline-block; }
   time { display: block; }
+  .openhouse-logo { fill: $h-m-grid-h5-color-h; width: 120px; height: 124px; }
 }
 
 .h-m-grid {
@@ -26,7 +27,7 @@ $h-m-grid-time-color: #c0bfbf;
 
   // add border only on large screens
   @include breakpoint('large') {
-    .row > div:nth-child(3n+2) {
+    .row > div:nth-child(3n+3) {
       .h-m-grid-item {
         border-right: 1px solid $h-m-grid-divider;
         border-left: 1px solid $h-m-grid-divider;
@@ -92,6 +93,7 @@ $h-m-grid-time-color: #c0bfbf;
 
   .openhouse-logo {
     width: 202px; height: 204px;
+    fill: black;
   }
 
   time  {
