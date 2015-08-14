@@ -36,12 +36,21 @@ $h-m-grid-time-color: #c0bfbf;
   }
   // Add border only on desktop
   @include breakpoint('desktop') {
+    .openhouse-logo { display: none; }
     .row > div:nth-child(2n+2) {
       .h-m-grid-item {
         border-left: 1px solid $h-m-grid-divider;
       }
     }
   }
+
+  @include breakpoint('tablet') {
+    .openhouse-logo { display: none; }
+  }
+  @include breakpoint('phone') {
+    .openhouse-logo { display: none; }
+  }
+
 
   // active hover state in tablet and mobile
   @media (max-width: $screen-lg-min) {
