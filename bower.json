@@ -27,8 +27,7 @@
     "material-design-lite": {
       "main": [
         "src/mdlComponentHandler.js",
-        "src/third_party/**/*.js",
-        "src/_variables.scss",
+        "src/third_party/rAF.js",
         "src/_variables.scss",
         "src/textfield/_textfield.scss",
         "src/textfield/textfield.js",
