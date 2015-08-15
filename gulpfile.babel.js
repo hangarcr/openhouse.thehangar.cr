@@ -218,7 +218,6 @@ gulp.task('wiredep', () => {
 
   gulp.src('app/*.html')
     .pipe(wiredep({
-      exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));

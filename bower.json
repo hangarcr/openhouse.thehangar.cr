@@ -14,8 +14,8 @@
     "bootstrap-sass": {
       "main": [
         "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
+        "assets/javascripts/bootstrap/transition.js",
+        "assets/javascripts/bootstrap/modal.js"
       ]
     },
     "webcomponentsjs": {

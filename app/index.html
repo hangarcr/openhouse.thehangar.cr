@@ -9,7 +9,7 @@
     <link rel="canonical" href="http://openhouse.thehangar.cr/?v=1" />
 
     <!-- Opengraph -->
-    <meta property="og:site_name" content="Hangar Openhouse"/>
+    <meta property="og:site_name"     content="Hangar Openhouse"/>
     <meta property="og:type"          content="website" />
     <meta property="og:url"           content="http://openhouse.thehangar.cr/?v=1" />
     <meta property="og:title"         content="Discover the place you want to be in." />
@@ -24,33 +24,21 @@
     <meta name="twitter:description" content="Come on August 29, visit our new office and discover some of our work for the biggest agencies and global brands. Participate and share your ideas in our Design, Technology and UX talks.">
     <meta name="twitter:image" content="http://openhouse.thehangar.cr/images/share/tw_img_v1.jpg">
 
-    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
+    <!-- build:css styles/main.min.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
     <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-
-
     <!-- build:css styles/ie.css -->
     <!--[if lt IE 10]>
-     <link rel="stylesheet" href="styles/ie.css">
+    <link rel="stylesheet" href="styles/ie.css">
     <![endif]-->
-     <!-- endbuild -->
-    <!--
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-    -->
+    <!-- endbuild -->
+
     <script src="/__/env.js"></script>
 
     <!-- <link rel="import" href="/bower_components/google-map/google-map.html"> -->
@@ -455,20 +443,12 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!--
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-    -->
-    <!-- build:js scripts/vendor.js -->
+    <!-- build:js scripts/vendor.min.js -->
     <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
     <script src="/bower_components/material-design-lite/src/mdlComponentHandler.js"></script>
     <script src="/bower_components/material-design-lite/src/third_party/rAF.js"></script>
     <script src="/bower_components/material-design-lite/src/textfield/textfield.js"></script>
@@ -479,12 +459,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <!-- endbuild -->
-
-    <!-- build:js scripts/main.js -->
+    <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

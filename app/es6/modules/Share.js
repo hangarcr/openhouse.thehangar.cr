@@ -1,11 +1,6 @@
 //imports/RegistrationForm .js
 
-var env_url = 'http://openhouse.thehangar.cr/';
-
-if (window.__env) {
-  env_url = window.__env.url;
-}
-
+var env_url = 'http://openhouse.thehangar.cr?v=54321';
 var url = encodeURIComponent(env_url);
 
 var facebookString = `http://www.facebook.com/sharer.php?s=100&p[url]=${url}`;
