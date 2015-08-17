@@ -13,4 +13,4 @@
 
 ## Divshot 
 - Run `gulp build` to build your webapp for production
-- Run `divshot push` to upload build to developement env
+- Run `divshot push` to upload the build
