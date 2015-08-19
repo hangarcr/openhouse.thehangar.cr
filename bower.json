@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1",
+    "modernizr": "2.6.2",
     "material-design-lite": "~1.0.2",
     "fastclick": "~1.0.6",
     "google-map": "GoogleWebComponents/google-map#~1.0.4",
@@ -20,6 +20,12 @@
     },
     "webcomponentsjs": {
       "main": []
+    },
+    "modernizr": {
+      "main": [
+        "modernizr.js",
+        "feature-detects/css-vhunit.js"
+      ]
     },
     "google-map": {
       "main": []
